@@ -1,2 +1,5 @@
 venv/
 app/__pycache__/
+app/blueprints/courses/__pycache__
+app/blueprints/login_signup/__pycache__
+app/blueprints/timetable/__pycache__

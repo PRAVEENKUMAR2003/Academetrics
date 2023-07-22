@@ -10,5 +10,5 @@ app.config["SECRET_KEY"] = "Secret1234"
 db = PyMongo(app).db
 
 app.register_blueprint(courses_bp, url_prefix="/courses")
-app.register_blueprint(login_signup_bp)
+app.register_blueprint(login_signup_bp, url_prefix="/user")
 app.register_blueprint(timetable_bp, url_prefix="/timetable")

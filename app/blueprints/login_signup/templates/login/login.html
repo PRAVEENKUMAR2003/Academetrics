@@ -1,0 +1,22 @@
+{% extends "login_signup_base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <form method="post" class="signup_form">
+
+        <label for="email">Email</label>
+        <input type="email" name="email"  required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password"  required>
+
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="{{ url_for('login_signup.signup') }}">Sign Up</a></p>
+    </form>
+{% endblock %}
