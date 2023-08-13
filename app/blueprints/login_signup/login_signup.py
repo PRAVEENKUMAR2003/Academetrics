@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, request, session
 from .models import User
 from app.login_required import login_required, logout_required
-import bcrypt
+
 login_signup_bp = Blueprint("login_signup", __name__, template_folder="templates",static_folder="static")
 
 @login_signup_bp.route("/test")
