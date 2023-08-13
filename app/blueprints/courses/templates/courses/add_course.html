@@ -1,0 +1,27 @@
+{% extends "base_template.html" %}
+
+{% block title %}Add Course{% endblock %}
+
+{% block body %}
+    <form method="post" class="Course_form">
+        <label for="CourseName">Course Name</label>
+        <input type="CourseName" name="CourseName" value="{{ course_d['CourseName'] }}" required>
+
+        <label for="CourseCode">Course Code</label>
+        <input type="text" name="CourseCode" value="{{ course_d['CourseCode'] }}" required>
+
+        <label for="TotalClasses">TotalClasses</label>
+        <input type="number" name="TotalClasses" value="{{ course_d['TotalClasses'] }}" required>
+
+        <label for="AttendedClasses">AttendedClasses</label>
+        <input type="number" name="AttendedClasses" value="{{ course_d['AttendedClasses'] }}" required>
+
+
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Add Course</button>
+    </form>
+{% endblock %}

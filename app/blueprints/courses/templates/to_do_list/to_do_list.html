@@ -1,0 +1,20 @@
+{% extends "base_template.html" %}
+
+{% block title %}Todo list{% endblock %}
+
+{% block body %}
+<div class="cards-list">
+  <div class="card_holder">
+    {% for i in list %}
+      <a href="{{ url_for('todo.go_todo',id=i['TodoName']) }}" class="card">
+        <div class="card_image"> 
+          <img src="https://cdn.wallpapersafari.com/92/74/vlxVsL.jpg" alt="Percentage Image">
+        </div>
+        <div class="card_title title-white">
+          <p>{{i["TodoName"]}}</p>
+        </div>
+      </a>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}
