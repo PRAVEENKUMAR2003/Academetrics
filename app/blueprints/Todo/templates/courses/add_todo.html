@@ -1,0 +1,24 @@
+{% extends "base_template.html" %}
+
+{% block title %}Add Todo{% endblock %}
+
+{% block body %}
+    <form method="post" class="Course_form">
+        <label for="TodoName">Task Name</label>
+        <input type="TodoName" name="TodoName" value="{{ course_d['TodoName'] }}" required>
+
+        <label for="TodoDescription">Description</label>
+        <input type="text" name="TodoDescription" value="{{ course_d['TodoDescription'] }}" required>
+
+        <label for="TodoDeadline">Deadline</label>
+        <input type="date" name="TodoDeadline" value="{{ course_d['TodoDeadline'] }}" required>
+
+
+
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Add Todo</button>
+    </form>
+{% endblock %}

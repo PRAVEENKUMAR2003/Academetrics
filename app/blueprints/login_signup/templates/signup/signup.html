@@ -11,10 +11,10 @@
         <input type="email" name="email" value="{{ user_d['email'] }}" required>
 
         <label for="password">Password</label>
-        <input type="password" name="password" value="{{ user_d['password'] }}" required>
+        <input type="password" name="password"  required>
 
         <label for="confirm_password">Confirm Password</label>
-        <input type="password" name="confirm_password" value="{{ user_d['confirm_password'] }}" required>
+        <input type="password" name="confirm_password"  required>
 
         {% if error %}
             <p>{{ error }}</p>
